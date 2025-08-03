@@ -1,0 +1,24 @@
+trigger:
+- main  # Change this to your branch name if needed
+
+pool:
+  name: Default  # Your custom agent pool name
+  demands:
+    - Agent.Name -equals 'Report S.K'  # Target specific agent
+
+variables:
+  NUM1: '5'
+  NUM2: '10'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python add.py
+  displayName: 'Run Addition Script'
+  env:
+    NUM1: $(NUM1)
+    NUM2: $(NUM2)
