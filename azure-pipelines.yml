@@ -2,19 +2,15 @@ trigger:
 - main
 
 pool:
-  name: Default  
+  name: Default
 
 variables:
   NUM1: '5'
   NUM2: '10'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.x'
-    addToPath: true
-
 - script: |
+    python --version
     python add.py
   displayName: 'Run Addition Script'
   env:
