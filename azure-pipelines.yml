@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: Default  # Don't target specific agent
+  name: Default  
 
 variables:
   NUM1: '5'
