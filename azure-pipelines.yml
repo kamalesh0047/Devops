@@ -1,10 +1,8 @@
 trigger:
-- main  # Change this to your branch name if needed
+- main
 
 pool:
-  name: Default  # Your custom agent pool name
-  demands:
-    - Agent.Name -equals 'report S.K'  # Target specific agent
+  name: Default  # Don't target specific agent
 
 variables:
   NUM1: '5'
