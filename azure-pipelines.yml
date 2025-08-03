@@ -4,7 +4,7 @@ trigger:
 pool:
   name: Default  # Your custom agent pool name
   demands:
-    - Agent.Name -equals 'Report S.K'  # Target specific agent
+    - Agent.Name -equals 'report S.K'  # Target specific agent
 
 variables:
   NUM1: '5'
