@@ -1,4 +1,6 @@
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-sum = num1 + num2
-print("The sum is:", sum)
+import os
+
+num1 = float(os.environ['NUM1'])
+num2 = float(os.environ['NUM2'])
+
+print("The sum is:", num1 + num2)
