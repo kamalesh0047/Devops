@@ -10,10 +10,10 @@ variables:
 
 steps:
 - script: |
-    echo "Running Python script..."
+    echo "Testing Python in PATH"
     python --version
     python add.py
-  displayName: 'Run add.py with Env Vars'
+  displayName: 'Run add.py using system Python'
   env:
     NUM1: $(NUM1)
     NUM2: $(NUM2)
