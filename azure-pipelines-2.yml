@@ -1,0 +1,18 @@
+trigger:
+- main
+
+pool:
+  name: Default 
+
+variables:
+  NUM1: '5'
+  NUM2: '10'
+
+steps:
+- script: |
+    "C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe" --version
+    "C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe" add.py
+  displayName: 'Run add.py with Full Python Path'
+  env:
+    NUM1: $(NUM1)
+    NUM2: $(NUM2)
