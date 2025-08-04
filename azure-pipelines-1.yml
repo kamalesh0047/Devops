@@ -1,0 +1,5 @@
+steps:
+- script: |
+    echo Current PATH:
+    echo %PATH%
+  displayName: 'Print PATH in Agent'
