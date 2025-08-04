@@ -1,5 +1,5 @@
 trigger:
-- main
+- main  # or your branch name
 
 pool:
   name: Default
@@ -10,9 +10,10 @@ variables:
 
 steps:
 - script: |
+    echo "Running Python script..."
     python --version
     python add.py
-  displayName: 'Run Addition Script'
+  displayName: 'Run add.py with Env Vars'
   env:
     NUM1: $(NUM1)
     NUM2: $(NUM2)
