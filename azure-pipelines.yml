@@ -1,19 +1,14 @@
 trigger:
-- main  # or your branch name
+- main  # or your actual branch
 
 pool:
   name: Default
 
-variables:
-  NUM1: '5'
-  NUM2: '10'
-
 steps:
 - script: |
-    echo "Testing Python in PATH"
-    python --version
-    python add.py
-  displayName: 'Run add.py using system Python'
+    C:\Python311\python.exe --version
+    C:\Python311\python.exe add.py
+  displayName: 'Run add.py with Full Python Path'
   env:
-    NUM1: $(NUM1)
-    NUM2: $(NUM2)
+    NUM1: '5'
+    NUM2: '10'
