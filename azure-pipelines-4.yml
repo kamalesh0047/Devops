@@ -1,0 +1,20 @@
+trigger:
+- main  
+
+pool:
+  name: Default
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.11'
+    addToPath: false
+  displayName: 'Skip built-in Python (using system Python)'
+
+- script: |
+    C:\Python311\python.exe --version
+    C:\Python311\python.exe add.py
+  displayName: 'Run add.py with Full Python Path'
+  env:
+    NUM1: '5'
+    NUM2: '10'
